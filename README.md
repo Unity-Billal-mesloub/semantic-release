@@ -149,8 +149,7 @@ Let people know that your package is published using **semantic-release** and wh
 
 ## Team
 
-| [![Billal-mesloub][https://github.com/Unity-Billal-mesloub.Image of president for Unity.png?size=100]](https://github.com/Unity-Billal-mesloub) | 
-| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
+| [![Billal-mesloub][https://avatars.githubusercontent.com/u/145295387?s=400&u=1c03bc195d2d338f2880f0d827e0b32b0fa685d6&v=4]](https://github.com/Unity-Billal-mesloub)
 | [Billal-mesloub](https://github.com/Unity-Billal-mesloub)                                          
 
 ## Alumni
