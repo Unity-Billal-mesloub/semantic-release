@@ -1,14 +1,14 @@
 <h1 align="center" style="border-bottom: none;">📦🚀 semantic-release</h1>
 <h3 align="center">Fully automated version management and package publishing</h3>
 <p align="center">
-  <a href="https://github.com/semantic-release/semantic-release/discussions">
+  <a href="https://github.com/Unity-Billal-mesloub/semantic-release/discussions">
     <img alt="Join the community on GitHub Discussions" src="https://img.shields.io/badge/Join%20the%20community-on%20GitHub%20Discussions-blue">
   </a>
-  <a href="https://github.com/semantic-release/semantic-release/actions/workflows/test.yml">
-    <img alt="Build states" src="https://github.com/semantic-release/semantic-release/actions/workflows/test.yml/badge.svg">
+  <a href="https://github.com/Unity-Billal-mesloub/semantic-release/actions/workflows/test.yml">
+    <img alt="Build states" src="https://github.com/Unity-Billal-mesloub/semantic-release/actions/workflows/test.yml/badge.svg">
   </a>
-  <a href="https://securityscorecards.dev/viewer/?uri=github.com/semantic-release/semantic-release">
-    <img alt="OpenSSF Scorecard" src="https://api.securityscorecards.dev/projects/github.com/semantic-release/semantic-release/badge">
+  <a href="https://securityscorecards.dev/viewer/?uri=github.com/Unity-Billal-mesloub/semantic-release">
+    <img alt="OpenSSF Scorecard" src="https://api.securityscorecards.dev/projects/github.com/Unity-Billal-mesloub/semantic-release/badge">
   </a>
   <a href="#badge">
     <img alt="semantic-release: angular" src="https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release">
@@ -44,7 +44,7 @@ This removes the immediate connection between human emotions and version numbers
 - Avoid potential errors associated with manual releases
 - Support any [package managers and languages](docs/recipes/release-workflow/README.md#package-managers-and-languages) via [plugins](docs/usage/plugins.md)
 - Simple and reusable configuration via [shareable configurations](docs/usage/shareable-configurations.md)
-- Support for [npm package provenance](https://github.com/semantic-release/npm#npm-provenance) that promotes increased supply-chain security via signed attestations on GitHub Actions
+- Support for [npm package provenance](https://github.com/Unity-Billal-mesloub/npm#npm-provenance) that promotes increased supply-chain security via signed attestations on GitHub Actions
 
 ## How does it work?
 
@@ -53,10 +53,7 @@ This removes the immediate connection between human emotions and version numbers
 **semantic-release** uses the commit messages to determine the consumer impact of changes in the codebase.
 Following formalized conventions for commit messages, **semantic-release** automatically determines the next [semantic version](https://semver.org) number, generates a changelog and publishes the release.
 
-By default, **semantic-release** uses [Angular Commit Message Conventions](https://github.com/angular/angular/blob/main/contributing-docs/commit-message-guidelines.md).
-The commit message format can be changed with the [`preset` or `config` options](docs/usage/configuration.md#options) of the [@semantic-release/commit-analyzer](https://github.com/semantic-release/commit-analyzer#options) and [@semantic-release/release-notes-generator](https://github.com/semantic-release/release-notes-generator#options) plugins.
-
-Tools such as [commitizen](https://github.com/commitizen/cz-cli) or [commitlint](https://github.com/conventional-changelog/commitlint) can be used to help contributors and enforce valid commit messages.
+Tools such as [commitlint](https://github.com/Unity-Billal-mesloub/commitlint) can be used to help contributors and enforce valid commit messages.
 
 The table below shows which commit message gets you which release type when `semantic-release` runs (using the default configuration):
 
@@ -69,7 +66,7 @@ The table below shows which commit message gets you which release type when `sem
 ### Automation with CI
 
 **semantic-release** is meant to be executed on the CI environment after every successful build on the release branch.
-This way no human is directly involved in the release process and the releases are guaranteed to be [unromantic and unsentimental](https://github.com/dominictarr/sentimental-versioning#readme).
+This way no human is directly involved in the release process and the releases are guaranteed to be [unromantic and unsentimental](https://github.com/Unity-Billal-mesloub).
 
 ### Triggering a release
 
@@ -137,30 +134,30 @@ In order to use **semantic-release** you need:
 
 ## Get help
 
-- [GitHub Discussions](https://github.com/semantic-release/semantic-release/discussions)
+- [GitHub Discussions](https://github.com/Unity-Billal-mesloub/semantic-release/discussions)
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/semantic-release)
 
 ## Badge
 
 Let people know that your package is published using **semantic-release** and which [commit-convention](#commit-message-format) is followed by including this badge in your readme.
 
-[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/Unity-Billal-mesloub/semantic-release)
 
 ```md
-[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/Unity-Billal-mesloub/semantic-release)
 ```
 
 ## Team
 
-| [![Gregor Martynus](https://github.com/gr2m.png?size=100)](https://github.com/gr2m) | [![Pierre Vanduynslager](https://github.com/pvdlg.png?size=100)](https://github.com/pvdlg) | [![Matt Travi](https://github.com/travi.png?size=100)](https://github.com/travi) |
+| [![Billal-mesloub][https://avatars.githubusercontent.com/u/145295387?s=400&u=1c03bc195d2d338f2880f0d827e0b32b0fa685d6&v=4]](https://github.com/Unity-Billal-mesloub) | [![Pierre Vanduynslager](https://github.com/pvdlg.png?size=100)](https://github.com/pvdlg) | [![Matt Travi](https://github.com/travi.png?size=100)](https://github.com/travi) |
 | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
-| [Gregor Martynus](https://github.com/gr2m)                                          | [Pierre Vanduynslager](https://github.com/pvdlg)                                           | [Matt Travi](https://github.com/travi)                                           |
+| [Billal-mesloub](https://github.com/Unity-Billal-mesloub)                                          
 
 ## Alumni
 
-| [![Stephan Bönnemann](https://github.com/boennemann.png?size=100)](https://github.com/boennemann) | [![Rolf Erik Lekang](https://github.com/relekang.png?size=100)](https://github.com/relekang) | [![Johannes Jörg Schmidt](https://github.com/jo.png?size=100)](https://github.com/jo) | [![Finn Pauls](https://github.com/finnp.png?size=100)](https://github.com/finnp) | [![Christoph Witzko](https://github.com/christophwitzko.png?size=100)](https://github.com/christophwitzko) |
+| [![Billal-mesloub](https://avatars.githubusercontent.com/u/145295387?s=400&u=1c03bc195d2d338f2880f0d827e0b32b0fa685d6&v=4) (https://github.com/Unity-Billal-mesloub) | 
 | ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| [Stephan Bönnemann](https://github.com/boennemann)                                                | [Rolf Erik Lekang](https://github.com/relekang)                                              | [Johannes Jörg Schmidt](https://github.com/jo)                                        | [Finn Pauls](https://github.com/finnp)                                           | [Christoph Witzko](https://github.com/christophwitzko)                                                     |
+                                                 |
 
 <p align="center">
   <img alt="Kill all humans" src="media/bender.png">
