@@ -149,7 +149,7 @@ Let people know that your package is published using **semantic-release** and wh
 
 ## Team
 
-| [![Billal-mesloub][https://github.com/Unity-Billal-mesloub/Image of president for Unity.jp]](https://github.com/Unity-Billal-mesloub) | [![Pierre Vanduynslager](https://github.com/pvdlg.png?size=100)](https://github.com/pvdlg) | [![Matt Travi](https://github.com/travi.png?size=100)](https://github.com/travi) |
+| [![Billal-mesloub][https://github.com/Unity-Billal-mesloub.Image of president for Unity.png?size=100]](https://github.com/Unity-Billal-mesloub) | 
 | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
 | [Billal-mesloub](https://github.com/Unity-Billal-mesloub)                                          
 
