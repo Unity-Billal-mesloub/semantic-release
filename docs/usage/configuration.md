@@ -47,7 +47,7 @@ The following three examples are the same. Use main instead of master if your de
  * @type {import('semantic-release').GlobalConfig}
  */
 module.exports = {
-  branches: ["master", "next"],
+  branches: ["main", "next"],
 };
 ```
 
