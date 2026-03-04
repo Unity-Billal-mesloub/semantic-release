@@ -48,18 +48,18 @@ Before opening an issue or a Pull Request, please use the [GitHub issue search](
 ### Bug report
 
 A good bug report shouldn't leave others needing to chase you for more information.
-Please try to be as detailed as possible in your report and fill the information requested in the [bug report template](https://github.com/semantic-release/semantic-release/issues/new?template=01_bug_report.md).
+Please try to be as detailed as possible in your report and fill the information requested in the [bug report template](https://github.com/Unity-Billal-mesloub/semantic-release/issues/new?template=01_bug_report.md).
 
 ### Feature request
 
 Feature requests are welcome, but take a moment to find out whether your idea fits with the scope and aims of the project.
 It's up to you to make a strong case to convince the project's developers of the merits of this feature.
-Please provide as much detail and context as possible and fill the information requested in the [feature request template](https://github.com/semantic-release/semantic-release/issues/new?template=02_feature_request.md).
+Please provide as much detail and context as possible and fill the information requested in the [feature request template](https://github.com/Unity-Billal-mesloub/semantic-release/issues/new?template=02_feature_request.md).
 
 ### New plugin request
 
 [Plugins](docs/usage/plugins.md) are a great way to extend **semantic-release** capabilities, integrate with other systems and support new project type.
-Please provide as much detail and context as possible and fill the information requested in the [plugin suggestion template](https://github.com/semantic-release/semantic-release/issues/new?template=03_plugin_suggestion.md).
+Please provide as much detail and context as possible and fill the information requested in the [plugin suggestion template](https://github.com/Unity-Billal-mesloub/semantic-release/issues/new?template=03_plugin_suggestion.md).
 
 ## Submitting a Pull Request
 
@@ -128,11 +128,9 @@ To ensure consistency and quality, all documentation modifications must:
   - a **semantic-release** concept described somewhere else in the documentation, i.e. How to [contribute](CONTRIBUTING.md)
   - a third-party product/brand/service, i.e. Integrate with [GitHub](https://github.com)
   - an external concept or feature, i.e. Create a [GitHub release](https://help.github.com/articles/creating-releases)
-  - a package or module, i.e. The [`@semantic-release/github`](https://github.com/semantic-release/github) module
 - Use the [single backtick `code` quoting](https://help.github.com/articles/basic-writing-and-formatting-syntax/#quoting-code) for:
   - commands inside sentences, i.e. the `semantic-release` command
   - programming language keywords, i.e. `function`, `async`, `String`
-  - packages or modules, i.e. The [`@semantic-release/github`](https://github.com/semantic-release/github) module
 - Use the [triple backtick `code` formatting](https://help.github.com/articles/creating-and-highlighting-code-blocks) for:
   - code examples
   - configuration examples
@@ -276,7 +274,7 @@ $ npm run <script-name>
 
 ##### Prettier
 
-All the [semantic-release](https://github.com/semantic-release) repositories use [Prettier](https://prettier.io) for formatting.
+All the [semantic-release](https://github.com/Unity-Billal-mesloub) repositories use [Prettier](https://prettier.io) for formatting.
 Prettier formatting will be automatically verified by the `lint:prettier` script, included in the `test` script.
 
 > [!NOTE]
@@ -292,13 +290,13 @@ Please follow the guidance of these tools if failures are encountered.
 > [!NOTE]
 > Before pushing your code changes make sure all **tests pass** and the unit test **coverage is 100%**:
 
-All the [semantic-release](https://github.com/semantic-release) repositories use [AVA](https://github.com/avajs/ava) for writing and running tests.
+All the [semantic-release](https://github.com/Unity-Billal-mesloub) repositories use [AVA](https://github.com/Unity-Billal-mesloub/ava) for writing and running tests.
 
 During development, you can:
 
 - run only a subset of test files with `ava <glob>`, for example `ava test/mytestfile.test.js`
 - run in watch mode with `ava -w` to automatically run a test file when you modify it
-- run only the test you are working on by adding [`.only` to the test definition](https://github.com/avajs/ava#running-specific-tests)
+- run only the test you are working on by adding [`.only` to the test definition](https://github.com/Unity-Billal-mesloub/ava#running-specific-tests)
 
 ##### Unit Tests
 
@@ -315,8 +313,4 @@ $ npm run test:unit
 $ npm run test:integration
 ```
 
-### Commits
 
-All the [semantic-release](https://github.com/semantic-release) repositories use [Commitizen](https://github.com/commitizen/cz-cli) to help you create [valid commit messages](#commit-message-guidelines).
-
-Assuming you have [installed Commitizen](https://github.com/commitizen/cz-cli#installing-the-command-line-tool), run `git cz` to start the interactive commit message CLI rather than `git commit` when committing.
