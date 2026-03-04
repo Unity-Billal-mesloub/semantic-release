@@ -4,7 +4,7 @@
 
 ### It is not needed for semantic-release to do its job
 
-[`@semantic-release/npm`](https://github.com/semantic-release/npm) takes care of updating the `package.json`’s version before publishing to [npm](https://www.npmjs.com) based on the previous version that was tracked as a git tag.
+[`@semantic-release/npm`](https://github.com/Unity-Billal-mesloub/npm) takes care of updating the `package.json`’s version before publishing to [npm](https://www.npmjs.com) based on the previous version that was tracked as a git tag.
 By default, only the published package will contain the version, which is the only place where it is _really_ required, but the updated `package.json` will not be pushed to the Git repository.
 A git tag is added to track the new version, so committing the version is not necessary for semantic-release to pick up from there for the next release.
 
@@ -24,7 +24,7 @@ To make it clear to contributors that the version is not kept up to date, we rec
 
 ### Making commits during the release process adds significant complexity
 
-While the [`@semantic-release/git`](https://github.com/semantic-release/git) enables committing such changes and pushing them back to the repository as part of a release, we strongly recommend against this practice.
+While the [`@semantic-release/git`](https://github.com/Unity-Billal-mesloub/git) enables committing such changes and pushing them back to the repository as part of a release, we strongly recommend against this practice.
 
 Making commits and pushing them back to the repository adds significant additional complexity to your release process that can be avoided:
 
@@ -35,14 +35,13 @@ Making commits and pushing them back to the repository adds significant addition
 ### There are valid reasons to commit during a release
 
 If you make your npm package available directly via a GitHub repository rather than publishing to a registry, for example, making a commit and pushing to the repository is a necessary step.
-In such a case you will want to use [`@semantic-release/git`](https://github.com/semantic-release/git) to coordinate the commit and push.
+In such a case you will want to use [`@semantic-release/git`](https://github.com/Unity-Billal-mesloub/git) to coordinate the commit and push.
 You can set the project to `"private": true,` within your `package.json` to [prevent publishing to the registry](https://docs.npmjs.com/cli/v10/using-npm/registry#how-can-i-prevent-my-package-from-being-published-in-the-official-registry).
 
 However, if you are choosing to follow this path because you can't use the official npm registry and don't want to manage your own registry, consider [publishing to GitHub packages](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry) instead.
 
 ## Should release notes be committed to a `CHANGELOG.md` in my repository during a release?
 
-[`@semantic-release/changelog`](https://github.com/semantic-release/changelog) can be used to add release notes to a `CHANGELOG.md` file within your repository as part of each release.
 Committing changes to a `CHANGELOG.md` or similar file introduces the same [complexities](#making-commits-during-the-release-process-adds-significant-complexity) as committing an updated version within a `package.json` file.
 In addition, the release notes that would be added to a changelog file are likely redundant with the release notes added as GitHub releases, if that is also configured for your project (enabled by default).
 
@@ -53,14 +52,12 @@ It could also be worth considering whether having a `CHANGELOG.md` in your repos
 
 The `package.json`’s version will be updated by the `semantic-release` command just before publishing to [npm](https://www.npmjs.com), therefore it won't be available for scripts ran before the `semantic-release` command.
 
-As the [`@semantic-release/npm`](https://github.com/semantic-release/npm) plugin uses the [npm CLI](https://docs.npmjs.com/cli/npm) to update the `package.json` version and publish the package, all [npm hook scripts](https://docs.npmjs.com/misc/scripts#description) will be executed.
+As the [`@semantic-release/npm`](https://github.com/Unity-Billal-mesloub/npm) plugin uses the [npm CLI](https://docs.npmjs.com/cli/npm) to update the `package.json` version and publish the package, all [npm hook scripts](https://docs.npmjs.com/misc/scripts#description) will be executed.
 
 You can run your build script in:
 
 - the `prepublishOnly` or `prepack` hook so it will be executed during the `publish` step of `@semantic-release/npm`
-- the `postversion` hook so it will be executed during the `prepare` step of `@semantic-release/npm`, which allow for example to update files before committing them with the [`@semantic-release/git`](https://github.com/semantic-release/git) plugin
-
-If using npm hook scripts is not possible, and alternative solution is to [`@semantic-release/exec`](https://github.com/semantic-release/exec) plugin to run your script in the `prepare` step:
+- the `postversion` hook so it will be executed during the `prepare` step of `@semantic-release/npm`, which allow for example to update files before committing them with the [`@semantic-release/git`](https://github.com/Unity-Billal-mesloub/git) plugin
 
 ```json
 {
@@ -94,11 +91,7 @@ To publish a non-Node package (without a `package.json`) you would need to:
 
 See the [CI configuration recipes](../recipes/release-workflow/README.md#ci-configurations) for more details on specific CI environments.
 
-In addition, you will need to configure the **semantic-release** [plugins](../usage/plugins.md#plugins) to disable the [`@semantic-release/npm`](https://github.com/semantic-release/npm) plugin which is used by default and use a plugin for your project type.
-
-If there is no specific plugin for your project type you can use the [`@semantic-release/exec`](https://github.com/semantic-release/exec) plugin to publish the release with a shell command.
-
-Here is a basic example to create [GitHub releases](https://help.github.com/articles/about-releases) and use a shell command to publish:
+In addition, you will need to configure the **semantic-release** [plugins](../usage/plugins.md#plugins) to disable the [`@Unity-Billal-mesloub/npm`](https://github.com/Unity-Billal-mesloub/npm) plugin which is used by default and use a plugin for your project type.
 
 ```json
 {
@@ -142,21 +135,15 @@ However this is not the recommended approach, as running unit and integration te
 
 ## Can I use semantic-release with GitLab?
 
-Yes, with the [`@semantic-release/gitlab-config`](https://github.com/semantic-release/gitlab-config) shareable configuration.
+Yes, with the [`@Unity-Billal-mesloub/gitlab-config`](https://github.com/Unity-Billal-mesloub/gitlab-config) shareable configuration.
 
 See the [GitLab CI recipes](../recipes/ci-configurations/gitlab-ci.md#using-semantic-release-with-gitlab-ci) for the CI configuration.
 
-## Can I use semantic-release with any Git hosted environment?
-
-By default **semantic-release** uses the [`@semantic-release/github`](https://github.com/semantic-release/github) plugin to publish a [GitHub release](https://help.github.com/articles/about-releases). For other Git hosted environment the [`@semantic-release/git`](https://github.com/semantic-release/git) and [`@semantic-release/changelog`](https://github.com/semantic-release/changelog) plugins can be used via [plugins configuration](../usage/plugins.md).
-
-See the [`@semantic-release/git`](https://github.com/semantic-release/git#semantic-releasegit) [`@semantic-release/changelog`](https://github.com/semantic-release/changelog#semantic-releasechangelog) plugins documentation for more details.
-
 ## Can I skip the release to the npm registry?
 
-Yes, the publishing to the npm registry can be disabled with the [`npmPublish`](https://github.com/semantic-release/npm#options) option of the [`@semantic-release/npm`](https://github.com/semantic-release/npm) plugin. In addition the [`tarballDir`](https://github.com/semantic-release/npm#options) option allow to generate the package tarball in order to publish it to your repository with the [`@semantic-release/git`](https://github.com/semantic-release/git) or to a [GitHub release](https://help.github.com/articles/about-releases) with the [`@semantic-release/github`](https://github.com/semantic-release/github) plugin.
+Yes, the publishing to the npm registry can be disabled with the [`npmPublish`](https://github.com/Unity-Billal-mesloub/npm#options) option of the [`@Unity-Billal-mesloub/npm`](https://github.com/Unity-Billal-mesloub/npm) plugin. In addition the [`tarballDir`](https://github.com/Unity-Billal-mesloub/npm#options) option allow to generate the package tarball in order to publish it to your repository with the [`@Unity-Billal-mesloub/git`](https://github.com/Unity-Billal-mesloub/git) 
 
-See the [`@semantic-release/npm`](https://github.com/semantic-release/npm#semantic-releasenpm) plugin documentation for more details.
+See the [`@Unity-Billal-mesloub/npm`](https://github.com/Unity-Billal-mesloub/npm#semantic-releasenpm) plugin documentation for more details.
 
 ## How can I revert a release?
 
@@ -171,13 +158,11 @@ Depending on the package manager you are using, you might be able to un-publish 
 
 In any case **do not remove the Git tag associated with the buggy version**, otherwise **semantic-release** will later try to republish that version. Publishing a version after un-publishing is not supported by most package managers.
 
-**Note**: If you are using the default [Angular Commit Message Conventions](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines) be aware that it uses a different revert commit format than the standard one created by [git revert](https://git-scm.com/docs/git-revert), contrary to what is [claimed in the convention](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#revert). Therefore, if you revert a commit with [`git revert`](https://git-scm.com/docs/git-revert), use the [`--edit` option](https://git-scm.com/docs/git-revert#git-revert---edit) to format the message according to the [Angular revert commit message format](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#revert). See [conventional-changelog/conventional-changelog#348](https://github.com/conventional-changelog/conventional-changelog/issues/348) for more details.
-
 ## Can I use `.npmrc` options?
 
 Yes, all the [npm configuration options](https://docs.npmjs.com/misc/config) are supported via the [`.npmrc`](https://docs.npmjs.com/files/npmrc) file at the root of your repository.
 
-See the [`@semantic-release/npm`](https://github.com/semantic-release/npm#npm-configuration) plugin documentation for more details.
+See the [`@Unity-Billal-mesloub/npm`](https://github.com/Unity-Billal-mesloub/npm#npm-configuration) plugin documentation for more details.
 
 ## How can I set the access level of the published npm package?
 
@@ -205,20 +190,6 @@ You can trigger a release by pushing to your Git repository. You deliberately ca
 
 Yes, every commits that contains `[skip release]` or `[release skip]` in their message will be excluded from the commit analysis and won't participate in the release type determination.
 
-## How can I change the type of commits that trigger a release?
-
-By default **semantic-release** uses the [Angular Commit Message Conventions](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines) and triggers releases based on the following rules:
-
-| Commit                      | Release type               |
-| --------------------------- | -------------------------- |
-| Commit with breaking change | ~~Major~~ Breaking release |
-| Commit with type `feat`     | ~~Minor~~ Feature release  |
-| Commit with type `fix`      | Patch release              |
-| Commit with type `perf`     | Patch release              |
-
-See the [`@semantic-release/npm`](https://github.com/semantic-release/npm#npm-configuration) plugin documentation for more details.
-
-This is fully customizable with the [`@semantic-release/commit-analyzer`](https://github.com/semantic-release/commit-analyzer) plugin's [`release-rules` option](https://github.com/semantic-release/commit-analyzer#release-rules).
 
 ## Is it _really_ a good idea to release on every push?
 
@@ -250,4 +221,4 @@ In addition, the [verify conditions step](../../README.md#release-steps) verifie
 
 [`npx`](https://www.npmjs.com/package/npx) – short for "npm exec" – is a CLI to find and execute npm binaries within the local `node_modules` folder or in the $PATH. If a binary can't be located npx will download the required package and execute it from its cache location.
 The tool is bundled with [npm](https://www.npmjs.com/package/npm) >= 5.2, or can be installed via `npm install -g npx`.
-For more details and motivation read the [introductory blog post](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) by [@zkat](https://github.com/zkat).
+For more details and motivation read the [introductory blog post](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) by [@Unity-Billal-mesloub](https://github.com/Unity-Billal-mesloub).
