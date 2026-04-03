@@ -57,13 +57,13 @@
     "yargs": "^18.0.0"
   },
   "devDependencies": {
-    "@types/node": "24.11.0",
+    "@types/node": "24.12.0",
     "@types/signale": "1.4.7",
     "ava": "7.0.0",
     "c8": "11.0.0",
     "clear-module": "4.1.2",
     "cz-conventional-changelog": "3.3.0",
-    "dockerode": "4.0.9",
+    "dockerode": "4.0.10",
     "file-url": "4.0.0",
     "fs-extra": "11.3.4",
     "got": "14.6.6",
@@ -73,10 +73,10 @@
     "mockserver-client": "5.15.0",
     "nock": "14.0.11",
     "npm-run-all2": "8.0.4",
-    "p-retry": "7.1.1",
+    "p-retry": "8.0.0",
     "prettier": "3.8.1",
     "publint": "0.3.18",
-    "sinon": "21.0.2",
+    "sinon": "21.0.3",
     "stream-buffers": "3.0.3",
     "tempy": "3.2.0",
     "testdouble": "3.20.2"
@@ -162,5 +162,5 @@
       "github>semantic-release/.github:renovate-config"
     ]
   },
-  "packageManager": "npm@11.11.0+sha512.f36811c4aae1fde639527368ae44c571d050006a608d67a191f195a801a52637a312d259186254aa3a3799b05335b7390539cf28656d18f0591a1125ba35f973"
+  "packageManager": "npm@11.12.1+sha512.cdca14b85d647b3192028d02aadbe82d75f79a446aceea9874be98e6d768f20ebd3555770a48d0e9906106007877bbc690f715e9372f2e2dc644a3c3157fb14c"
 }
